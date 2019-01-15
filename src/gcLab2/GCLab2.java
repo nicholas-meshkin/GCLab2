@@ -32,9 +32,9 @@ public class GCLab2 {
 		System.out.println("Perimeter: " + perimeter);
 		System.out.println("Volume: " + volume);
 		System.out.println("Would you like to continue? (y/n)");
-		scnr.nextLine();
-		continueStatus = scnr.nextLine();
-		} while (!(continueStatus.equals("n")));
+//		scnr.nextLine(); need this if use nextLine on next line, b/c it sees the new line symbol and uses that
+		continueStatus = scnr.next();
+		} while (!(continueStatus.equalsIgnoreCase("n"))); /* probably could have done while equals y instead of does not equal n*/
 		scnr.close();
 		System.out.println("Thank you for using Room Calculator!");
 	}
